@@ -1,3 +1,4 @@
+'use strict';
 // 1) Tutorial
 
 /*
@@ -111,13 +112,13 @@ console.log("Data si ora curenta:" + datetime);
 
 
 // 4)
-var arr = []
+let arr = [];
 
-for (i = 0; i < 100; i++) {
+for (let i = 0; i < 100; i++) {
 	arr.push(i+1);
 }
 
-for (a of arr.filter(x => x % 2 == 0)) {
+for (let a of arr.filter(x => x % 2 == 0)) {
 	console.log(a);
 }
 
