@@ -1,4 +1,5 @@
 'use strict';
+
 // 1) Tutorial
 
 /*
@@ -102,7 +103,7 @@ console.log("Hello World!");
 // 3)
 var currentdate = new Date(); 
 var datetime = currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/" 
+                + (currentdate.getMonth() + 1)  + "/" 
                 + currentdate.getFullYear() + " " 
                 + currentdate.getHours() + ":"  
                 + currentdate.getMinutes() + ":" 
@@ -115,7 +116,7 @@ console.log("Data si ora curenta:" + datetime);
 let arr = [];
 
 for (let i = 0; i < 100; i++) {
-	arr.push(i+1);
+	arr.push(i + 1);
 }
 
 for (let a of arr.filter(x => x % 2 == 0)) {
@@ -128,4 +129,4 @@ function myfunc(v, idx, fct) {
 	console.log(fct(v, idx));
 }
 
-myfunc(arr, 3, (x, y) => x[y-1]);
+myfunc(arr, 3, (x, y) => x[y - 1]);
