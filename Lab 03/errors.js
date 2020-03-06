@@ -9,21 +9,18 @@ class ErrorHandler extends Error {
 }
 
 const handleError = (err, res) => {
-
   let { statusCode, message } = err;
-  if (statusCode === undefined)
-    statusCode = 500;
-  
+  if (statusCode === undefined) statusCode = 500;
+  if (message === undefined) message = 'Internal Error';
   res.status(statusCode).json({
-    status: "error",
+    status: 'error',
     statusCode,
-    message
+    message,
   });
   console.log(`\tError ${statusCode} as ${message}`);
-
 };
 
 module.exports = {
   ErrorHandler,
-  handleError
-}
+  handleError,
+};
